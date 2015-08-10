@@ -21,6 +21,7 @@ angular.module('stockDogApp')
           existingStock.shares += stock.shares;
         } else {
           _.extend(stock, StockModel);
+          if (!this.stocks) this.stocks = [];
           this.stocks.push(stock);
         }
         this.recalculate();
